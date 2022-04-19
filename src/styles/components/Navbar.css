@@ -1,0 +1,59 @@
+.Navbar {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar__logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar__logo__first {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 10px;
+    background-color: var(--white);
+    font-size: 1.75rem;
+    margin-right: 1rem;
+}
+
+.navbar__logo__first svg path {
+    stroke: var(--red);
+}
+
+.navbar__logo__second {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.navbar__menu {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.navbar__menu li {
+    padding: 1.25rem 2rem;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.navbar__btn {
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--violet);
+    padding: 1rem 1rem;
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+}

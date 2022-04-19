@@ -1,0 +1,29 @@
+.Submenu {
+    position: absolute;
+    top: 4.125rem;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 3;
+    display: none;
+    background-color: var(--white);
+    border-radius: 10px;
+    padding: 2rem;
+}
+
+.submenu--show {
+    display: block;
+}
+
+.Submenu::before {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid var(--white);
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
