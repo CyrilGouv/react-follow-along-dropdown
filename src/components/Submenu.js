@@ -1,14 +1,37 @@
+import { useEffect, useRef } from 'react'
+
 import '../styles/components/Submenu.css'
 
-import { links } from '../data'
 
-const Submenu = () => {
+const Submenu = ({ show, position, link: { page, links } }) => {
     
+    const submenu = useRef(null)
+
+    useEffect(() => {
+        submenu.current.style.left = position + 'px'
+    }, [position])
+
     return (
-        <ul className="Submenu submenu--show">
-            {/* <h4>Online Courses</h4>
-            <li></li> */}
-            Submenu
+        <ul 
+            ref={ submenu }
+            className={ `${show ? 'Submenu submenu--show' : 'Submenu'}` }
+        >
+            <h4>{ page }</h4>
+            
+            { links && (
+                <div className='submenu__links'>
+                    { links.map((link, idx) => {
+
+                        const { label, icon, url } = link
+                        return (
+                            <li key={ idx }>
+                                <a href={ url }>{ icon } <span>{ label }</span></a>
+                            </li>
+                        )
+                    }) }
+                </div>
+            ) }
+            
         </ul>
     )
 }

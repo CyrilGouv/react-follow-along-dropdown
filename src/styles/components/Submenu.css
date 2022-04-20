@@ -7,7 +7,7 @@
     display: none;
     background-color: var(--white);
     border-radius: 10px;
-    padding: 2rem;
+    padding: 3rem;
 }
 
 .submenu--show {
@@ -27,3 +27,38 @@
     left: 50%;
     transform: translateX(-50%);
   }
+
+  .submenu__links {
+      display: flex;
+  }
+
+.submenu__links li {
+    padding-right: 2rem;
+}
+
+.Submenu h4 {
+    font-size: 1.125rem;
+    color: var(--red);
+}
+
+.submenu__links li:last-of-type {
+    padding-right: 0;
+}
+
+.submenu__links a {
+    display: flex;
+    align-items: center;
+    color: var(--black);
+    font-size: 1.125rem;
+    text-decoration: none;
+    transition: color .25s;
+}
+
+.submenu__links a:hover {
+    color: var(--violet);
+}
+
+.submenu__links a span {
+    display: inline-block;
+    margin-left: 1rem;
+}

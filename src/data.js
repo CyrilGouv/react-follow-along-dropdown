@@ -43,7 +43,7 @@ export const links = [
         ]
     },
     {
-        'page': 'Summer Camps',
+        'page': 'Summer Camp',
         'links': [
             {
                 label: 'Learn more',
